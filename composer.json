@@ -1,0 +1,19 @@
+{
+  "name": "aisha-alimi/graphic-editor",
+  "type": "library",
+  "description": "Graphic Editor - PHP Code Test",
+  "authors": [
+    {
+      "name": "Aisha Alimi",
+      "email": "aisha.a.alimi@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GraphicEditor\\": "src/"
+    }
+  }
+}
