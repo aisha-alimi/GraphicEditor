@@ -18,7 +18,7 @@ class Points extends AbstractRender
         ];
 
         if ($this->format instanceof \GraphicEditor\Formats\Points) {
-            $this->format->setPoints($points);
+            $this->format->addPoints($points);
         }
     }
 }

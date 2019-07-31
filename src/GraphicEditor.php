@@ -48,11 +48,9 @@ class GraphicEditor
 
     public function run(AbstractFormat $format)
     {
-        $i = 0;
         foreach ($this->shapes as $shape) {
             $rendering = $this->renderFactory->create($shape, $format);
             $rendering->draw();
-
         }
 
         return $format->getOutput();

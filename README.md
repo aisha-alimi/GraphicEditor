@@ -5,10 +5,10 @@ A service for a simple app called “Graphic Editor”. The service draws geomet
 
 # Installation
 
-Navigate to project directory
-run `composer install`
+- Navigate to project directory
+- run `composer install`
 
 
 # Usage
 
-CLI - run `php cli.php`
+- CLI - run `php cli.php`

@@ -3,21 +3,35 @@
 namespace GraphicEditor\Factories;
 
 use GraphicEditor\Shapes\AbstractShape;
+use GraphicEditor\Shapes\Circle;
+use GraphicEditor\Shapes\Square;
 
 class ShapeFactory
 {
     /**
-     * @param   array $shape
+     * @param   array $input
      * @return  AbstractShape
      */
-    public function create(array $shape) : AbstractShape
+    public function create(array $input) : AbstractShape
     {
-        $class = "GraphicEditor\\Shapes\\" . ucfirst($shape['type']);
+        $shapeType = strtolower($input['type']);
+        $shape = null;
+        $attributes = $input['params'];
 
-        if (! class_exists($class)) {
-            throw new \RuntimeException("The class for " . $shape['type'] . " does not exist");
+        switch ($shapeType) {
+            case 'circle' :
+                $shape = new Circle($attributes);
+                break;
+            case 'square' :
+                $shape = new Square($attributes);
         }
 
-        return new $class($shape['params']);
+        if ($shape === null) {
+            throw new \RuntimeException("The class for " . $shapeType . " does not exist");
+        }
+
+        $shape->validateAttributes($shape->getAttributes());
+
+        return $shape;
     }
 }

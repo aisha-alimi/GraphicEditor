@@ -15,8 +15,8 @@ class Points extends AbstractFormat
     /**
      * @param array $points
      */
-    public function setPoints(array $points)
+    public function addPoints(array $points)
     {
-        $this->output = $points;
+        $this->output[] = $points;
     }
 }

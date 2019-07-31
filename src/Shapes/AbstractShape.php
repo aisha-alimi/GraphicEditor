@@ -13,9 +13,7 @@ abstract class AbstractShape
      */
     final public function __construct(array $attributes)
     {
-        if ($this->validateAttributes($attributes)) {
-            $this->attributes = $attributes;
-        }
+        $this->attributes = $attributes;
     }
 
     /**
@@ -45,4 +43,11 @@ abstract class AbstractShape
 
         return $this->attributes[$key];
     }
+
+    public function getAttributes()
+    {
+        return $this->attributes;
+    }
+
+
 }
