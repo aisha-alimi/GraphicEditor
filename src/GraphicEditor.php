@@ -45,7 +45,10 @@ class GraphicEditor
         }
     }
 
-
+    /**
+     * @param AbstractFormat $format
+     * @return mixed
+     */
     public function run(AbstractFormat $format)
     {
         foreach ($this->shapes as $shape) {

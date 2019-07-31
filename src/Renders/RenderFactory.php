@@ -15,6 +15,7 @@ class RenderFactory
      */
     public function create(AbstractShape $shape, AbstractFormat $format) : AbstractRender
     {
+        //The shape and format arguments should have a corresponding render class ex. Circle/Image
         try {
             $shapeClassName = (new \ReflectionClass($shape))->getShortName();
             $formatClassName = (new \ReflectionClass($format))->getShortName();

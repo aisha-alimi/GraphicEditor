@@ -6,6 +6,9 @@ use GraphicEditor\Renders\AbstractRender;
 
 class Image extends AbstractRender
 {
+    /**
+     * Draw the square based on the attributes
+     */
     public function draw()
     {
         $canvas = $this->format->getOutput();

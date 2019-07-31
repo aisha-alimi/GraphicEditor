@@ -7,6 +7,9 @@ use GraphicEditor\Renders\AbstractRender;
 
 class Points extends AbstractRender
 {
+    /**
+     * Calculate the corresponding points based on the parameters
+     */
     public function draw()
     {
         //Skip calculations; dummy result after calculating points

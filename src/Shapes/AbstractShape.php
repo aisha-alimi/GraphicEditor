@@ -17,6 +17,8 @@ abstract class AbstractShape
     }
 
     /**
+     * Validates the required parameters
+     *
      * @param array $attributes
      * @return bool
      */

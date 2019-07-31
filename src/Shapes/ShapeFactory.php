@@ -5,6 +5,8 @@ namespace GraphicEditor\Shapes;
 class ShapeFactory
 {
     /**
+     * Returns the corresponding shape object based on the input
+     *
      * @param   array $input
      * @return  AbstractShape
      */

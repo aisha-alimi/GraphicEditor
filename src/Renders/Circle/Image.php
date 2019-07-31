@@ -6,6 +6,9 @@ use GraphicEditor\Renders\AbstractRender;
 
 class Image extends AbstractRender
 {
+    /**
+     * Draw the circle based on the attributes
+     */
     public function draw()
     {
         $canvas = $this->format->getOutput();

@@ -50,7 +50,7 @@ $shapes = [
     ]
 ];
 
-
+// Instantiate Graphic Editor, load the shapes input and produce outputs in both formats
 
 try {
     $graphicEditor = new GraphicEditor(new ShapeFactory(), new RenderFactory());
@@ -61,11 +61,12 @@ try {
     echo $e->getMessage();
 }
 
-/** Image Output */
+// Image Output
+
 $imageBinary = $graphicEditor->run(new Image(600, 400));
 imagepng($imageBinary, 'shapes.png');
 echo "Image: shapes.png saved!" . PHP_EOL;
 
-/** Array Of Points Output */
+// Array Of Points Output
 $pointsArray = $graphicEditor->run(new Points());
 print_r($pointsArray);
