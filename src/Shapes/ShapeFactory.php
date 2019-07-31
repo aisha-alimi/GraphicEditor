@@ -1,10 +1,6 @@
 <?php
 
-namespace GraphicEditor\Factories;
-
-use GraphicEditor\Shapes\AbstractShape;
-use GraphicEditor\Shapes\Circle;
-use GraphicEditor\Shapes\Square;
+namespace GraphicEditor\Shapes;
 
 class ShapeFactory
 {

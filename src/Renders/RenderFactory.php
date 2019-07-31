@@ -1,8 +1,7 @@
 <?php
 
-namespace GraphicEditor\Factories;
+namespace GraphicEditor\Renders;
 
-use GraphicEditor\Renders\AbstractRender;
 use GraphicEditor\Shapes\AbstractShape;
 use GraphicEditor\Formats\AbstractFormat;
 
@@ -20,14 +19,14 @@ class RenderFactory
             $shapeClassName = (new \ReflectionClass($shape))->getShortName();
             $formatClassName = (new \ReflectionClass($format))->getShortName();
 
-            $renderClassName = "GraphicEditor\\Renders\\" . $shapeClassName . "\\" . $formatClassName;
+            $renderClassName = __NAMESPACE__ . "\\" . $shapeClassName . "\\" . $formatClassName;
 
         } catch (\ReflectionException $e) {
             throw new \RuntimeException($e->getMessage());
         }
 
         if (! class_exists($renderClassName)) {
-            throw new \RuntimeException("The class for" . $renderClassName . "does not exist");
+            throw new \RuntimeException("The class for " . $renderClassName . " does not exist");
         }
 
         return new $renderClassName($shape, $format);

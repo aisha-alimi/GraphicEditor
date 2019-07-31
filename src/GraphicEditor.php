@@ -2,8 +2,8 @@
 
 namespace GraphicEditor;
 
-use GraphicEditor\Factories\RenderFactory;
-use GraphicEditor\Factories\ShapeFactory;
+use GraphicEditor\Renders\RenderFactory;
+use GraphicEditor\Shapes\ShapeFactory;
 use GraphicEditor\Formats\AbstractFormat;
 use GraphicEditor\Shapes\AbstractShape;
 

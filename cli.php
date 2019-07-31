@@ -1,7 +1,7 @@
 <?php
 
-use GraphicEditor\Factories\RenderFactory;
-use GraphicEditor\Factories\ShapeFactory;
+use GraphicEditor\Renders\RenderFactory;
+use GraphicEditor\Shapes\ShapeFactory;
 use GraphicEditor\Formats\Image;
 use GraphicEditor\Formats\Points;
 use GraphicEditor\GraphicEditor;
